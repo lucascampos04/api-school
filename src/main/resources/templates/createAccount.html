@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Conta</title>
+</head>
+<body>
+    <h1>Escola Jorgina</h1>
+    <form method="post" th:object="${createAccount}" th:action="@{/conta-criado-com-sucesso}">
+
+        <label for="nome">Nome completo : </label>
+        <input type="text" id="nome" name="nome" th:field="*{nome}"/>
+        <hr/>
+        <label for="email">Emial : </label>
+        <input type="text" id="email" name="email" th:field="*{email}"/>
+        <hr/>
+        <label for="senha">Senha : </label>
+        <input type="senha" id="senha" name="senha" th:field="*{senha}"/>
+
+
+    </form>
+</body>
+</html>

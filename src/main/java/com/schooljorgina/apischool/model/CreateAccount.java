@@ -16,4 +16,8 @@ public class CreateAccount {
     private String senha;
 
     private LocalDateTime dataLogin;
+
+    public LocalDateTime getDataHoraAtual() {
+        return LocalDateTime.now();
+    }
 }

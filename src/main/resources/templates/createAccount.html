@@ -10,14 +10,23 @@
 
         <label for="nome">Nome completo : </label>
         <input type="text" id="nome" name="nome" th:field="*{nome}"/>
-        <hr/>
+        <hr>
         <label for="email">Emial : </label>
         <input type="text" id="email" name="email" th:field="*{email}"/>
-        <hr/>
+        <hr>
         <label for="senha">Senha : </label>
         <input type="senha" id="senha" name="senha" th:field="*{senha}"/>
-
-
+        <hr>
+        <p th:value="${createAccount.getDataHoraAtual()}" id="horaNow"></p>
     </form>
+
+    <script>
+        function LocalDateTime(){
+            const horaLocal = document.getElementById('horaNow');
+            horaLocal.innerText = new Date().toLocaleString();
+        }
+        LocalDateTime();
+
+    </script>
 </body>
 </html>

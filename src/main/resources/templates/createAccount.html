@@ -6,8 +6,7 @@
 </head>
 <body>
     <h1>Escola Jorgina</h1>
-    <form method="post" th:object="${createAccount}" th:action="@{/conta-criado-com-sucesso}">
-
+    <form method="post" th:object="${createAccount}" th:action="@{/conta-criada}">
         <label for="nome">Nome completo : </label>
         <input type="text" id="nome" name="nome" th:field="*{nome}"/>
         <hr>
@@ -17,7 +16,9 @@
         <label for="senha">Senha : </label>
         <input type="senha" id="senha" name="senha" th:field="*{senha}"/>
         <hr>
-        <p th:value="${createAccount.getDataHoraAtual()}" id="horaNow"></p>
+        <p id="horaNow"></p>
+        <br>
+        <input type="submit" value="Criar conta"/>
     </form>
 
     <script>
